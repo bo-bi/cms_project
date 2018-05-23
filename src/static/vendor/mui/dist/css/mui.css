@@ -5018,6 +5018,15 @@ body > .mui-progressbar
 
     src: url('../fonts/mui.ttf') format('truetype');
 }
+
+/*引入自定义的字体图标*/
+@font-face {
+    font-family: Muiicons;
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../fonts/iconfont.ttf') format('truetype');
+}
 .mui-icon
 {
     font-family: Muiicons;
@@ -5477,6 +5486,21 @@ body > .mui-progressbar
 {
     content: '\e588';
 }
+
+/*引入自定义的样式*/
+.icon-27:before { content: "\e61d"; }
+
+.icon-shopcart:before { content: "\e60b"; }
+
+.icon-huiyuan:before { content: "\e641"; }
+
+.icon-huiyuan2:before { content: "\e65f"; }
+
+.icon-huiyuan1:before { content: "\e60e"; }
+
+.icon-shouye:before { content: "\e613"; }
+
+
 
 .mui-fullscreen
 {
