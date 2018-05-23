@@ -18,6 +18,10 @@ Vue.use(Mint);
 //MUI: 引入css
 import './static/vendor/mui/dist/css/mui.css';
 
+//引入自己的css
+//全局css
+import './static/css/global.css';
+
 //Axios: 引入axios
 import Axios from 'axios';
 //Axios: 挂载原型
@@ -32,6 +36,9 @@ Axios.defaults.baseURL = 'http://172.20.31.213:9999/json/';
 //------------------引入自己的vue文件start---------------------------------
 import App from './app.vue';
 import Home from './components/home/home.vue';
+import Member from './components/member/member.vue';
+import Shopcart from './components/shopcart/shopcart.vue';
+import Search from './components/search/search.vue';
 
 //------------------引入自己的vue文件end---------------------------------
 
@@ -39,6 +46,7 @@ import Home from './components/home/home.vue';
 
 //VueRouter:创建路由对象并配置路由规则
 let router = new VueRouter({
+    linkActiveClass: 'mui-active',//默认值 'router-link-active'
     routes: [
         //VueRouter: 配置路由规则
         {
@@ -51,6 +59,21 @@ let router = new VueRouter({
             name: 'home',
             path: '/home',
             component: Home
+        },
+        {
+            name: 'member',
+            path: '/member',
+            component: Member
+        },
+        {
+            name: 'shopcart',
+            path: '/shopcart',
+            component: Shopcart
+        },
+        {
+            name: 'search',
+            path: '/search',
+            component: Search
         }
     ]
 });
