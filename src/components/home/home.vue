@@ -21,10 +21,11 @@
         <div class="mui-content">
             <ul class="mui-table-view mui-grid-view mui-grid-9">
                 <li class="mui-table-view-cell mui-media mui-col-xs-4">
-                    <a href="#">
+                    <!-- 1.去哪里 -->
+                    <router-link :to="{name:'news.list'}">
                         <span class="mui-icon mui-icon-home"></span>
                         <div class="mui-media-body">新闻资讯</div>
-                    </a>
+                    </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4">
                     <a href="#">
