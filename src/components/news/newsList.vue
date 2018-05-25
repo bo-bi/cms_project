@@ -3,7 +3,7 @@
         <nav-bar :title="navTitle"></nav-bar>
         <!--MUI图文列表-->
         <ul class="mui-table-view">
-            <li class="mui-table-view-cell mui-media" v-for="news in newsList" :key="news.id">
+            <router-link class="mui-table-view-cell mui-media" v-for="news in newsList" :key="news.id" :to="{name:'news.detail',query:{id:news.id}}" tag="li">
                 <a href="javascript:;">
                     <img class="mui-media-object mui-pull-left" :src="news.img_url">
                     <div class="mui-media-body">
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                 </a>
-            </li>
+            </router-link>
         </ul>
     </div>
 </template>

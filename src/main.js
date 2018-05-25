@@ -56,6 +56,7 @@ import Member from './components/member/member.vue';
 import Shopcart from './components/shopcart/shopcart.vue';
 import Search from './components/search/search.vue';
 import NewsList from './components/news/newsList.vue';
+import NewsDetail from './components/news/newsDetail.vue';
 //------------------引入自己的vue文件end---------------------------------
 
 
@@ -99,6 +100,12 @@ let router = new VueRouter({
             name: 'news.list',
             path: '/news/list',
             component: NewsList
+        },
+        //新闻详情
+        {
+            name: 'news.detail',
+            path: '/news/detail',
+            component: NewsDetail
         }
     ]
 });
