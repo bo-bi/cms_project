@@ -11,10 +11,25 @@ import Mint from 'mint-ui';
 //Mint: 引入css
 import 'mint-ui/lib/style.css';
 //Mint: 安装组件库
-Vue.use(Mint);
-
+// Vue.use(Mint);
+//lazyload: 这里配置了懒加载(mint的懒加载源于vue-lazyload项目)
+Vue.use(Mint, {
+        lazyload: {
+            preLoad: 1.3,
+            error: 'http://h5.duia.com/xiaoke_wx/resources/xk-common/images/lazy-error.png',
+            loading: 'http://h5.duia.com/xiaoke_wx/resources/xk-common/images/lazy-loading.png',
+            attempt: 1,
+            // the default is ['scroll', 'wheel', 'mousewheel', 'resize', 'animationend', 'transitionend']
+            listenEvents: ['scroll']
+        }
+});
 //MUI: 引入css
 import './static/vendor/mui/dist/css/mui.css';
+
+//VueAwesomeSwiper:引入轮播图
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.css';
+Vue.use(VueAwesomeSwiper)
 
 //引入自己的css
 //全局css
@@ -57,6 +72,7 @@ import Shopcart from './components/shopcart/shopcart.vue';
 import Search from './components/search/search.vue';
 import NewsList from './components/news/newsList.vue';
 import NewsDetail from './components/news/newsDetail.vue';
+import PhotoShare from './components/photo/photoShare.vue';
 //------------------引入自己的vue文件end---------------------------------
 
 
@@ -106,6 +122,12 @@ let router = new VueRouter({
             name: 'news.detail',
             path: '/news/detail',
             component: NewsDetail
+        },
+        //图文分享
+        {
+            name: 'photo.share',
+            path: '/photo/share',
+            component: PhotoShare
         }
     ]
 });

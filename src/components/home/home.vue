@@ -28,10 +28,10 @@
                     </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4">
-                    <a href="#">
+                    <router-link :to="{name:'photo.share'}">
                         <span class="mui-icon mui-icon-email"></span>
                         <div class="mui-media-body">图文分享</div>
-                    </a>
+                    </router-link>
                 </li><li class="mui-table-view-cell mui-media mui-col-xs-4">
                 <a href="#">
                     <span class="mui-icon mui-icon-chatbubble"></span>
@@ -61,8 +61,9 @@
 </template>
 
 <script>
-    import 'swiper/dist/css/swiper.css'
-    import { swiper, swiperSlide } from 'vue-awesome-swiper'
+    //以组件方式引入
+    // import 'swiper/dist/css/swiper.css'
+    // import { swiper, swiperSlide } from 'vue-awesome-swiper'
     export default {
         data() {
             return {
@@ -84,10 +85,11 @@
                 },
             }
         },
-        components: {
-            swiper,
-            swiperSlide
-        },
+        //以组件方式引入
+        // components: {
+        //     swiper,
+        //     swiperSlide
+        // },
         created() {
             this.$ajax.get('home/banner.json')
                 .then(res=>{
