@@ -45,6 +45,10 @@ Axios.defaults.baseURL = 'http://172.20.31.213:9999/json/';
 
 //Moment:引入moment
 import Moment from 'moment';
+
+//VuePreview: 引入vue-preview
+import VuePreview from 'vue-preview';
+Vue.use(VuePreview);
 //------------------引入第三方包end------------------------------------
 
 //---------------定义成全局过滤器start，大家都能使用----------------------
@@ -73,6 +77,7 @@ import Search from './components/search/search.vue';
 import NewsList from './components/news/newsList.vue';
 import NewsDetail from './components/news/newsDetail.vue';
 import PhotoShare from './components/photo/photoShare.vue';
+import PhotoDetail from './components/photo/photoDetail.vue';
 //------------------引入自己的vue文件end---------------------------------
 
 
@@ -128,6 +133,12 @@ let router = new VueRouter({
             name: 'photo.share',
             path: '/photo/share',
             component: PhotoShare
+        },
+        //图片详情
+        {
+            name: 'photo.detail',
+            path: '/photo/detail/:id',
+            component: PhotoDetail
         }
     ]
 });

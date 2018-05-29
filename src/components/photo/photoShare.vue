@@ -9,8 +9,8 @@
         </swiper>
         <div class="photo-list">
             <ul>
-                <li v-for="img in imgs" :key="img.content_id">
-                    <a href="">
+                <router-link :to="{name:'photo.detail',params:{id:img.content_id}}" v-for="img in imgs" :key="img.content_id" tag="li">
+                    <a>
                         <!--<img :src="img.img_url" />-->
                         <!--懒加载-->
                         <img v-lazy="img.img_url" />
@@ -20,7 +20,7 @@
                             <span>{{img.forward}}</span>
                         </p>
                     </a>
-                </li>
+                </router-link>
             </ul>
         </div>
     </div>

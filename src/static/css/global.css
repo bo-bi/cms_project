@@ -1,6 +1,9 @@
 body {
     background-color: #fff;
 }
+li {
+    list-style: none;
+}
 /*浮动*/
 .fl {
     float: left;
@@ -33,4 +36,26 @@ body {
 }
 .tmpl {
     margin-bottom: 50px;/*底部的tab-bar占位置了*/
+}
+
+/*vue-preview渲染出来的结构样式*/
+.photoDetail-preview {
+    padding: 0 10px;
+}
+.photoDetail-preview .my-gallery {
+    width: 100%;
+    overflow: hidden;
+}
+.photoDetail-preview .my-gallery figure {
+    width: 31.3%;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+.photoDetail-preview .my-gallery figure:nth-child(3n) {
+    margin-right: 0;
+}
+.photoDetail-preview .my-gallery figure img {
+    width: 100%;
+    height: 80px;
+    vertical-align: middle;
 }

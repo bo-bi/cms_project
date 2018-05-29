@@ -1,0 +1,24 @@
+{
+  "status": 200,
+  "message": [
+    {
+      "src": "http://test2.duia.com/wap%E9%A6%96%E9%A1%B5/images/wap-index-banner1.png"
+    },
+    {
+      "src": "http://test2.duia.com/wap%E9%A6%96%E9%A1%B5/images/wap-index-banner2.jpg"
+    },
+    {
+      "src": "http://test2.duia.com/wap%E9%A6%96%E9%A1%B5/images/wap-index-banner3.jpg"
+    },
+    {
+      "src": "http://test2.duia.com/wap%E9%A6%96%E9%A1%B5/images/wap-index-banner4.jpg"
+    },
+    {
+      "src": "http://test2.duia.com/wap%E9%A6%96%E9%A1%B5/images/wap-index-banner5.jpg"
+    },
+    {
+      "src": "http://test2.duia.com/wap%E9%A6%96%E9%A1%B5/images/wap-index-banner1.png"
+    }
+  ]
+}
+
